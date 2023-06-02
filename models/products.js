@@ -15,28 +15,18 @@ const productSchema = new Schema({
     type: String,
     required: true,
   },
-  owner: {
-    type: Schema.Types.ObjectId,
-    ref: 'user',
-    required: true,
-  },
 }, { versionKey: false, timestamps: true });
 
 productSchema.post("save", handleMongooseError);
 
 const addSchema = Joi.object({
-  name: Joi.string().required(),
-  email: Joi.string()
-    .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
-  phone: Joi.string().required(),
-  favorite: Joi.boolean(),
+  title: Joi.string().required(),
+  photo: Joi.string(),
+  price: Joi.string().required(),
 });
-const updateFavoriteSchema = Joi.object({
-  favorite: Joi.boolean().required(),
-});
+
 const schemas = {
   addSchema,
-  updateFavoriteSchema,
 }
 
 const Product = model("product", productSchema);

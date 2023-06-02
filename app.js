@@ -4,8 +4,8 @@ const cors = require('cors');
 require("dotenv").config();
 
 const productsRouter = require('./routes/api/products');
-// const userOrderRouter = require('./ruotes/api/orders')
-// const authRouter = require('./routes/api/auth');
+const userOrderRouter = require('./routes/api/orders')
+const authRouter = require('./routes/api/auth');
 const app = express();
 
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
@@ -16,8 +16,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.use('/api/products', productsRouter);
-// app.use('/api/orders', userOrderRouter);
-// app.use('/api/users', authRouter);
+app.use('/api/orders', userOrderRouter);
+app.use('/api/users', authRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Not found' })
