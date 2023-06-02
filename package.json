@@ -2,6 +2,9 @@
   "name": "template",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=16.x"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
@@ -31,8 +34,5 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "5.2.0",
     "nodemon": "2.0.15"
-  },
-  "engines": {
-    "node": ">=14 <15"
   }
 }
