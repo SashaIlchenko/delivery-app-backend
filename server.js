@@ -8,7 +8,8 @@ mongoose.set('strictQuery', true);
 
 mongoose.connect("mongodb+srv://sandrabrovska:QhcCxRVOMKX7NM0N@cluster0.ngut3ky.mongodb.net/db-products?retryWrites=true&w=majority")
   .then(() => {
-    // app.listen(PORT);
+    app.listen(3001);
+
     console.log("Database connection successful");
   })
   .catch(error => {
