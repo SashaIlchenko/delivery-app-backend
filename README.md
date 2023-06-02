@@ -1,31 +1,34 @@
-## GoIT Node.js Course Template Homework
+"Delivery -App" -application for delivery food.
 
-Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
-Форк створить репозиторій на вашому http://github.com
+About the app: Frontend: This app was created from a template based on react create app. There are 2 pages with react router navigation connected. The first page is the store bar and the product list. The customer can filter the list of products by the selected store. As long as he does not choose - will see the animation. From the list you can add a product to cart and go to the second page - cart. Here the user can select the quantity, delete the product, see the total price and complete the order by filling in the form. Also autofill the address, the map is connected, but still in development. In the near future the map will show the selected area.
 
-Додайте ментора до колаборації
+Stack technologies and libraries: React, Git, emotion-styled, axios ,formik, nanoid, router-dom and other. 
+Command: npm start
 
-Для кожної домашньої роботи створюйте свою гілку.
+Backend: Backend realized in other repo [https://github.com/SashaIlchenko/delivery-app-backend] on Node.js with connection to MongoDB. Get and post queries are implemented. When the page loads, the data are loaded from the database and filtered using buttons. When you click on the button to place an order, data about the order and the user are sent to the Mongo database.
+The list shows the name, price of the product and the photo - is randomly generated using [https://loremflickr.com] (a temporary solution for testing). In the future it is possible to create your own repository of unique images with links to the image database. Also implemented part of the user authorization with tokens, which will make sense for the frontend part of the history of orders of the buyer and others futures. It was deployed on [Render.com].
 
-- hw02
-- hw03
-- hw04
-- hw05
-- hw06
+Stack technologies and libraries: Node.js, express, MongoDB, Mondoose, Joi Schema and other.
+- `npm start` &mdash; stert server on production
+- `npm run start:dev` &mdash; stert server (development)
+- `npm run lint` &mdash; testing code by eslint 
+- `npm lint:fix` &mdash; testing code by eslint with fix primitive bugs
 
-Кожна нова гілка для др повинна робитися з master
+Repo URL Frontend: [https://github.com/SashaIlchenko/delivery-app]
 
-Після того, як ви закінчили виконувати домашнє завдання у своїй гілці, необхідно зробити пулл-реквест (PR). Потім додати ментора для рев'ю коду. Тільки після того, як ментор заапрувить PR, ви можете виконати мердж гілки з домашнім завданням у майстер.
+Live Page Frontend: [https://sashailchenko.github.io/delivery-app/]
 
-Уважно читайте коментарі ментора. Виправте зауваження та зробіть коміт у гілці з домашнім завданням. Зміни підтягнуться у PR автоматично після того, як ви відправите коміт з виправленнями на github
-Після виправлення знову додайте ментора на рев'ю коду.
+Repo URL Backend: [https://github.com/SashaIlchenko/delivery-app-backend]
 
-- При здачі домашньої роботи є посилання на PR
-- JS-код чистий та зрозумілий, для форматування використовується Prettier
+Live Page Backeng: [https://delivery-app-api-7kmw.onrender.com]
 
-### Команди:
+My GitHub: [https://github.com/SashaIlchenko]; My Linkedin: [linkedin.com/in/oleksandra-ilchenko] My Telegram: [https://t.me/sandra_ilchenko]
 
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+
+
+
+
+
+
+
+
